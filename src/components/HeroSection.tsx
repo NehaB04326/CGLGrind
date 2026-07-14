@@ -54,7 +54,7 @@ export default function HeroSection({ onStartMock }: HeroSectionProps) {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-medium">
+            <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl font-medium">
               Elevate your preparation using our ultra-accurate, zero-gimmick computer-based exam simulators. Specially engineered to replicate exact interface dimensions, pacing triggers, and sectional locks, ensuring your practice is identical to the actual exam environment.
             </p>
 

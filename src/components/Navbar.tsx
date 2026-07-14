@@ -55,7 +55,7 @@ export default function Navbar() {
               <button
                 onClick={() => toggleDropdown("exams")}
                 onMouseEnter={() => setActiveDropdown("exams")}
-                className="flex items-center gap-1 px-3.5 py-1.5 text-sm font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
+                className="flex items-center gap-1 px-3.5 py-1.5 text-[15px] font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
               >
                 Exams
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "exams" ? "rotate-180" : ""}`} />
@@ -99,7 +99,7 @@ export default function Navbar() {
             {/* Live Tests */}
             <Link
               href="/live-tests"
-              className="flex items-center gap-1.5 px-3.5 py-1.5 text-sm font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 text-[15px] font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
             >
               <span>Live Tests</span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-red-50 px-1.5 py-0.5 text-[9px] font-bold text-red-500 border border-red-200">
@@ -113,7 +113,7 @@ export default function Navbar() {
               <button
                 onClick={() => toggleDropdown("pyq")}
                 onMouseEnter={() => setActiveDropdown("pyq")}
-                className="flex items-center gap-1 px-3.5 py-1.5 text-sm font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
+                className="flex items-center gap-1 px-3.5 py-1.5 text-[15px] font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
               >
                 Previous Year Papers
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "pyq" ? "rotate-180" : ""}`} />
@@ -150,7 +150,7 @@ export default function Navbar() {
             {/* Current Affairs */}
             <Link
               href="/current-affairs"
-              className="px-3.5 py-1.5 text-sm font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
+              className="px-3.5 py-1.5 text-[15px] font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
             >
               Current Affairs
             </Link>
@@ -158,7 +158,7 @@ export default function Navbar() {
             {/* Quiz Practice */}
             <Link
               href="/quiz-practice"
-              className="flex items-center gap-1.5 px-3.5 py-1.5 text-sm font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
+              className="flex items-center gap-1.5 px-3.5 py-1.5 text-[15px] font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
             >
               <span>Quiz Practice</span>
               <span className="inline-flex items-center rounded-full bg-purple-50 px-1.5 py-0.5 text-[9px] font-bold text-brand-accent border border-purple-200 tracking-wider">
@@ -169,7 +169,7 @@ export default function Navbar() {
             {/* Pricing */}
             <Link
               href="/pricing"
-              className="px-3.5 py-1.5 text-sm font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
+              className="px-3.5 py-1.5 text-[15px] font-bold text-slate-600 hover:text-brand-primary hover:bg-slate-50 transition-all duration-150 rounded-md"
             >
               Pricing
             </Link>

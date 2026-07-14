@@ -15,6 +15,7 @@ import FaqSection from "@/components/FaqSection";
 import FooterIntercept from "@/components/FooterIntercept";
 import TCSExamSimulator from "@/components/TCSExamSimulator";
 import SimulatorPreview from "@/components/SimulatorPreview";
+import UrgencyBanner from "@/components/UrgencyBanner";
 
 // Root component level global constant variable
 export const PRODUCT_APP_URL = "https://app.prepgrind.com/register";
@@ -41,6 +42,9 @@ export default function Home() {
         {/* CGL Syllabus explorer tab block */}
         <SyllabusExplorer />
 
+        {/* Attention-grabbing Urgency Banner Slot A */}
+        <UrgencyBanner />
+
         {/* 3-Column Mock Packages Grid */}
         <TestGrid onStartMock={handleStartMock} />
 
@@ -49,6 +53,9 @@ export default function Home() {
 
         {/* ASO vs Inspector Career parameter comparative grid */}
         <CompareSection />
+
+        {/* Attention-grabbing Urgency Banner Slot B */}
+        <UrgencyBanner />
 
         {/* CGL 2026 Exam event calendar timelines */}
         <ExamCalendar />
