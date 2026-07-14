@@ -1,26 +1,194 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-primary: #4f46e5;
+  --color-brand-primary-hover: #4338ca;
+  --color-brand-accent: #8b5cf6;
+  --color-brand-accent-hover: #7c3aed;
+  --color-brand-teal: #0d9488;
+  --color-brand-teal-hover: #0f766e;
+  
+  --color-brand-slate-50: #f8fafc;
+  --color-brand-slate-100: #f1f5f9;
+  --color-brand-slate-200: #e2e8f0;
+  --color-brand-slate-300: #94a3b8;
+  --color-brand-slate-500: #64748b;
+  --color-brand-slate-600: #475569;
+  --color-brand-slate-700: #334155;
+  --color-brand-slate-800: #161d2b;
+  --color-brand-slate-900: #0b0f19;
+  --color-brand-slate-950: #030712;
+  
+  --font-sans: Satoshi, var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+
+  --animate-slide-in: slide-in 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-up: fade-in-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-sonar: sonar 2s infinite ease-in-out;
+  --animate-marquee: marquee 30s linear infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: #f8fafc;
+  --foreground: #030712;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #030712;
+    --foreground: #f8fafc;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Custom Keyframe Animations */
+@keyframes slide-in {
+  0% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sonar {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shimmer-glint {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Shimmer Button Utility */
+.bg-shimmer-btn {
+  background: linear-gradient(110deg, #4f46e5 45%, #c084fc 50%, #4f46e5 55%);
+  background-size: 200% 100%;
+  animation: shimmer-glint 3.5s infinite linear;
+}
+
+.bg-shimmer-btn:hover {
+  opacity: 0.95;
+  transform: scale(1.005);
+}
+
+/* Premium SaaS Shadows, Glows & Gradients */
+.shadow-premium-sm {
+  box-shadow: 0 1px 3px 0 rgba(3, 7, 18, 0.02), 0 1px 2px -1px rgba(3, 7, 18, 0.02);
+}
+
+.shadow-premium-md {
+  box-shadow: 0 4px 12px -2px rgba(3, 7, 18, 0.03), 0 2px 6px -1px rgba(3, 7, 18, 0.02);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 12px 30px -4px rgba(3, 7, 18, 0.08), 0 4px 12px -2px rgba(3, 7, 18, 0.04);
+}
+
+.shadow-glow-indigo {
+  box-shadow: 0 0 24px -4px rgba(79, 70, 229, 0.12), 0 0 12px -2px rgba(79, 70, 229, 0.06);
+}
+
+.shadow-glow-violet {
+  box-shadow: 0 0 24px -4px rgba(139, 92, 246, 0.12), 0 0 12px -2px rgba(139, 92, 246, 0.06);
+}
+
+.bg-gradient-primary {
+  background-image: linear-gradient(135deg, #4f46e5 0%, #8b5cf6 100%);
+}
+
+.text-gradient-primary {
+  background-image: linear-gradient(135deg, #4f46e5 0%, #8b5cf6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Custom Micro-Animations */
+@keyframes pulse-indigo {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+.animate-pulse-indigo {
+  animation: pulse-indigo 2s infinite ease-in-out;
+}
+
+@keyframes pulse-white {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.animate-pulse-white {
+  animation: pulse-white 2s infinite ease-in-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #161d2b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
 }
