@@ -42,9 +42,6 @@ export default function Home() {
         {/* CGL Syllabus explorer tab block */}
         <SyllabusExplorer />
 
-        {/* Attention-grabbing Urgency Banner Slot A */}
-        <UrgencyBanner />
-
         {/* 3-Column Mock Packages Grid */}
         <TestGrid onStartMock={handleStartMock} />
 
